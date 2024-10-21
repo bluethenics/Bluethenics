@@ -1,0 +1,623 @@
+header {
+    background-color: rgb(45, 12, 134);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-buttons button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(2, 2, 2);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+}
+
+.nav-buttons button:hover {
+    background-color: rgb(40, 60, 238);
+}
+
+.nav-buttons {
+    display: inline-block;
+    position: relative;
+    bottom: 0px;
+    height: auto;
+    width: auto;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+    position: relative;
+    bottom: 25px;
+    right: -30px;
+}
+
+.wrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.subheading {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    margin: 10px;
+    font-weight: normal;
+}
+
+.subheading2 {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    margin: 10px;
+    font-weight: normal;
+    position: relative;
+    top: -375px;
+}
+
+.subheading3 {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    margin: 10px;
+    font-weight: normal;
+    position: relative;
+    bottom: 375px;
+    left: 100px;
+}
+
+.subheading8 {
+    color: #000000;
+    position: relative;
+    right: 310px;
+    font-size: 50px;
+    font-weight: normal;
+}
+.paragragh8 {
+    color: #000000;
+    text-align: left;
+    position: relative;
+    right: 200px;
+    font-size: larger;
+}
+.paragraph {
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+    font: caption;
+    margin: 20px;
+    text-align: center;
+    padding: 0PX;
+    width: 500px;
+    height: 500px;
+}
+
+.paragraph3 {
+    position: relative;
+    top: -300px;
+    bottom: 400px;
+    color: #000000;
+}
+
+.center-image1 {
+    display: block;
+    margin: auto;
+    width: 100.625%;
+    height: 100.25%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    top: 300px;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    top: 200px;
+}
+
+.center-image {
+    display: block;
+    margin:  auto;
+    width: 500px;
+    height: 500px;
+    padding: 0;
+    gap: 0;
+    column-gap: 0cm;
+    position: relative;
+    top: 0px;
+}
+
+.paragraph2 {
+    text-align: left;
+    width: 100%;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2px;
+}
+
+.buynow-button {
+    color: rgb(0, 0, 0);
+    height: 30px;
+    width: 70px;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.index-redro-img {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: 2px;
+    border-radius: 20px;
+}
+.index-redro-button {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+}
+.cloths-enter-img {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+}
+.cloths-enter-button {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+}
+
+.img2 {
+    width: 100%;
+
+}
+.subheading10 {
+    position: relative;
+    top: 800px;
+}
+
+.last-info {
+    background-color: rgb(48, 46, 46);
+    position: relative;
+    top: 10px;
+}
+
+.header-logo {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    right: 135px;
+    top: 50px;
+    border-radius: 15px;
+    
+}
+
+.aboutuslogo {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    left: 10px;
+}
+
+.aboutus-heading {
+    background-color: azure;
+    font-size: xx-large;
+    text-align: center;
+    position: relative;
+    right: 25px;
+    color: rgb(17, 17, 17);
+}
+
+.aboutus-divison {
+    background-color: rgb(255, 255, 255);
+}
+
+.aboutus-paragraph {
+    font-size: large;
+    color: #000000;
+}
+
+.ABOUTUS-BODY {
+    color: rgb(255, 252, 252);
+    background-color: rgb(255, 255, 255);
+}
+
+.intexhtml-body {
+    color: rgb(255, 252, 252);
+    background-color: rgb(255, 255, 255);
+}
+
+.redro-image-button {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    border-radius: 10px;
+}
+
+.paragraph4 {
+    color: #000000;
+    position: relative;
+    bottom: 325px;
+    left: 125px;
+    font-size: larger;
+}
+
+.getridoflazyless-image-button {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 270px;
+    bottom: 317px;
+    border-radius: 10px;
+}
+.nutrition-image-button {
+    position: relative;
+    left: 10px;
+    bottom: 305px;
+    border-radius: 10px;
+}
+
+.redro-image {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: -1px;
+    top: -1px;
+    border-radius: 10px;
+}
+.getridoflazyless-image {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 10px;
+}
+
+.nutrition-image {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 10px;
+}
+.mind-image-button {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 270px;
+    bottom: 634px;
+    border-radius: 10px;
+}
+.mind-image {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 10px;
+}
+.protein-shake-image-button {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 10px;
+    bottom: 610px;
+    border-radius: 10px;
+}
+.protein-shake-image {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 10px;
+}
+.height-boost-image-button {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 270px;
+    bottom: 936px;
+    border-radius: 10px;
+}
+.height-boost-image {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 10px;
+}
+.skin-care-image-button {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 10px;
+    bottom: 920px;
+    border-radius: 10px;
+}
+.skin-care-image {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 10px;
+}
+.testoterone-image-button {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 270px;
+    bottom: 1244px;
+    border-radius: 10px;
+}
+.testoterone-image {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 10px;
+}
+
+.communication-image-button {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 10px;
+    bottom: 1244px;
+    border-radius: 10px;
+}
+.communication-image {
+    width: 250px;
+    height: 320px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 10px;
+}
+.redro-shop-image {
+    width: 300px;
+    height: 350;
+   position: relative; 
+   left: 80px;
+   top: 20px;
+   border-radius: 10px;
+}
+.subheading-shoppage {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    margin: 10px;
+    font-weight: normal;
+    position: relative;
+    bottom: -200px;
+}
+.paragraph-shop-redro {
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+    font: caption;
+    margin: 20px;
+    text-align: left;
+    padding: 0PX;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: -200px;
+}
+.buy-now-button {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    bottom: 550px;
+    left: 170px;
+}
+.buy-now-img {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    bottom: 2px;
+    left: -2px;
+}
+.payment-heading {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    position: relative;
+    top: 50px;
+    left: 150px;
+}
+.pay-button-qr {
+    width: 100px;
+    height: 30px;
+    font: bold;
+    
+    position: relative;
+    bottom: 200px;
+    top: 0px;
+}
+.price-redro {
+    color: #000000;
+    position: relative;
+    top: 30px;
+    left: 150px;
+}
+.upi-button {
+    height: 30px;
+    width: 600px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 50px;
+    left: -40px;
+}
+.QR {
+    position: relative;
+    left: 170px;
+    bottom: 225px;
+}
+.buy-now-button-getridoflazyness {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    bottom: -50px;
+    left: 170px;
+}
+.buy-now-img-getridoflazyness {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    bottom: 2px;
+    left: -2px;
+}
+.price-getridoflazyness {
+    color: #000000;
+    position: relative;
+    bottom: -50px;
+    left: 195px;
+
+}
+.subheading-shoppage-getridoflazyness {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    margin: 10px;
+    font-weight: normal;
+    position: relative;
+    bottom: -50px;
+}
+.paragraph-shop-getridoflazyness {
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+    font: caption;
+    margin: 20px;
+    text-align: left;
+    padding: 0PX;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom: -50px;
+}
+.upi-button2 {
+    height: 30px;
+    width: 600px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 50px;
+    left: -40px;
+}
+.paragraph-shop-nutrition {
+    color: #000000;
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+.price-nutrition {
+    color: #000000;
+    position: relative;
+    bottom: -30px;
+    left: 175px;
+}
+.buy-now-button-nutrition {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    bottom: -50px;
+    left: 170px;
+}
+.buy-now-img-nutrition {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    bottom: 2px;
+    left: -2px;
+}
+.payment-heading-instruction {
+    color: #000000;
+    position: relative;
+    left: 0px;
+    top: 100px;
+    font-size: xx-large;
+    width: auto;
+}
+.paragraph-shop-instruction {
+    color: #000000;
+    position: relative;
+    left: 0px;
+    top: 100px;
+    font-size: medium;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for tablets and mobile */
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjust styles for small mobile screens */
+    .container {
+        width: 100%;
+        padding: 0 5px;
+    }
+}
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;  /* Smaller text for mobile */
+    }
+    .container {
+        width: 100%;  /* Make the container full width */
+        padding: 10px; /* Add padding for better spacing */
+    }
+    /* Adjust other elements like navigation, images, etc. */
+}
+
+
