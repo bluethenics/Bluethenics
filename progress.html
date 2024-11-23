@@ -6,6 +6,60 @@
 
             <link rel="stylesheet" href="style.css">
             <title>bluethenics</title>
+            
+
+            
+    <style>
+        /* Container for all buttons */
+        button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 12px 24px; /* Spacing inside the button */
+            font-size: 16px; /* Text size */
+            border: none; /* Remove borders */
+            border-radius: 8px; /* Rounded corners */
+            cursor: pointer; /* Change cursor on hover */
+            transition: all 0.3s ease-in-out; /* Smooth transition for effects */
+            text-align: center; /* Center the text */
+            display: inline-block; /* Align buttons inline */
+            margin: 10px; /* Space between buttons */
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+            transform: scale(1.05); /* Slightly enlarge the button */
+        }
+
+        /* Focused button effect (on tab focus) */
+        button:focus {
+            outline: none; /* Remove default focus outline */
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.5); /* Green glow on focus */
+        }
+
+        /* Styling for buttons specifically inside a div with class 'heading-of-progress' */
+        .heading-of-progress button {
+            background-color: #007BFF; /* Blue background for section-specific buttons */
+            font-weight: bold; /* Make text bold */
+        }
+
+        .heading-of-progress button:hover {
+            background-color: #0056b3; /* Darker blue for hover */
+        }
+
+        /* Responsive button styles */
+        @media (max-width: 768px) {
+            button {
+                padding: 10px 20px; /* Smaller padding on mobile */
+                font-size: 14px; /* Slightly smaller text on mobile */
+            }
+        }
+    </style>
+
+
+
+
+
         </head>
         <body>
             <div class="wrapper">
@@ -37,11 +91,15 @@
 
                 <canvas id="progressChart" width="400" height="400"></canvas>
 
-                <div class="typing-section">
+                <div class="typing-section" id="sectionA">
                 <div>
+
                     <div class="heading-of-progress">
+                        
                         <h2>A</h2>
-                    <span class="tooltip-icon" data-tooltip="Enter your most important activities in 'A' section. after doing that activity you can come back and click in the box. this increases your focus">?</span>
+                        <button onclick="scrollToSection('sectionB')">GO TO B</button>
+                        <button onclick="scrollToSection('sectionC')">GO TO C</button>
+                        <span class="tooltip-icon" data-tooltip="Enter your first priority activities that you are going to do in this day in 'A' section .">?</span>
                     </div>
                     
                     <div>
@@ -94,8 +152,9 @@
                     </div>
                 </div>
                 <div>
-                    <div class="heading-of-progress">
+                    <div class="heading-of-progress" id="sectionB">
                         <h2>B</h2>
+                        <button onclick="scrollToSection('sectionA')">GO TO A</button>
                     <span class="tooltip-icon" data-tooltip="Enter your second priority activities in 'B' section .">?</span>
                     </div>
                     <div>
@@ -148,8 +207,9 @@
                     </div>
                 </div>
                 <div>
-                    <div class="heading-of-progress">
+                    <div class="heading-of-progress" id="sectionC">
                         <h2>C</h2>
+                        <button onclick="scrollToSection('sectionA')">GO TO A</button>
                     <span class="tooltip-icon" data-tooltip="Enter your last priority in 'C' section eg:- entertainment,regular activities,etc.">?</span>
                     </div>
                     <div>

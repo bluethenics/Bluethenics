@@ -116,3 +116,18 @@ document.querySelectorAll('.tooltip-icon').forEach(icon => {
 
 
 
+
+
+
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+
+
+
+
+
+
