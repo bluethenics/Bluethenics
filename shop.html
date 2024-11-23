@@ -30,36 +30,46 @@
                 </header>
 
 
-                <div class="shop-grid">
-                    <button onclick="location.href='redro-shop.html'" class="shop-button">
-                        <img src="redro.jpg" alt="REDRO">
-                        <p>REDRO</p>
-                    </button>
-                    <button onclick="location.href='communication-shop.html'" class="shop-button">
-                        <img src="communication.png" alt="COMMUNICATION">
-                        <p>COMMUNICATION</p>
-                    </button>
-                    <button onclick="location.href='height-shop.html'" class="shop-button">
-                        <img src="height-boost.jpg" alt="HEIGHT-BOOST">
-                        <p>HEIGHT-BOOST</p>
-                    </button>
-                    <button onclick="location.href='mind-shop.html'" class="shop-button">
-                        <img src="mind.jpg" alt="MIND">
-                        <p>MIND</p>
-                    </button>
-                    <button onclick="location.href='testosterone-shop.html'" class="shop-button">
-                        <img src="testosterone.jpg" alt="TESTOSTERONE">
-                        <p>TESTOSTERONE</p>
-                    </button>
-                    <button onclick="location.href='get-out-of-R-and-L-shop.html'" class="shop-button">
-                        <img src="getridoflazyless.jpg" alt="GET RID OF L&R">
-                        <p>GET RID OF L&R</p>
-                    </button>
-                    <button onclick="location.href='NUTRITION-shop.html'" class="shop-button">
-                        <img src="nutrition.jpg" alt="NUTRITION">
-                        <p>NUTRITION</p>
-                    </button>
+                
+
+
+                 <!-- Search Bar -->
+                 <div class="search-bar-container">
+                    <input type="text" id="search-bar" placeholder="Search..." onkeyup="filterOptions()">
+                    <div id="search-results" class="search-results"></div>
                 </div>
+                
+
+        <div class="shop-grid">
+            <button onclick="location.href='redro-shop.html'" class="shop-button">
+                <img src="redro.jpg" alt="REDRO">
+                <p>REDRO</p>
+            </button>
+            <button onclick="location.href='communication-shop.html'" class="shop-button">
+                <img src="communication.png" alt="COMMUNICATION">
+                <p>COMMUNICATION</p>
+            </button>
+            <button onclick="location.href='height-shop.html'" class="shop-button">
+                <img src="height-boost.jpg" alt="HEIGHT-BOOST">
+                <p>HEIGHT-BOOST</p>
+            </button>
+            <button onclick="location.href='mind-shop.html'" class="shop-button">
+                <img src="mind.jpg" alt="MIND">
+                <p>MIND</p>
+            </button>
+            <button onclick="location.href='testosterone-shop.html'" class="shop-button">
+                <img src="testosterone.jpg" alt="TESTOSTERONE">
+                <p>TESTOSTERONE</p>
+            </button>
+            <button onclick="location.href='get-out-of-R-and-L-shop.html'" class="shop-button">
+                <img src="getridoflazyless.jpg" alt="GET RID OF L&R">
+                <p>GET RID OF L&R</p>
+            </button>
+            <button onclick="location.href='NUTRITION-shop.html'" class="shop-button">
+                <img src="nutrition.jpg" alt="NUTRITION">
+                <p>NUTRITION</p>
+            </button>
+        </div>
                 
 
 
@@ -74,7 +84,44 @@
                         const sidebar=document.querySelector('.sidebar')
                         sidebar.style.display = 'none'
                     }
-                </script>
+                
+                
+
+                // Search Functionality
+                const shopItems = [
+                    { name: 'REDRO', path: 'redro-shop.html' },
+                    { name: 'COMMUNICATION', path: 'communication-shop.html' },
+                    { name: 'HEIGHT-BOOST', path: 'height-shop.html' },
+                    { name: 'MIND', path: 'mind-shop.html' },
+                    { name: 'TESTOSTERONE', path: 'testosterone-shop.html' },
+                    { name: 'GET RID OF L&R', path: 'get-out-of-R-and-L-shop.html' },
+                    { name: 'NUTRITION', path: 'NUTRITION-shop.html' }
+                ];
+    
+                function filterOptions() {
+                    const query = document.getElementById('search-bar').value.toLowerCase();
+                    const resultsDiv = document.getElementById('search-results');
+                    resultsDiv.innerHTML = ''; // Clear previous results
+    
+                    if (query) {
+                        const matches = shopItems.filter(item => item.name.toLowerCase().includes(query));
+    
+                        matches.forEach(item => {
+                            const result = document.createElement('div');
+                            result.className = 'search-result';
+                            result.textContent = item.name;
+                            result.onclick = () => (location.href = item.path);
+                            resultsDiv.appendChild(result);
+                        });
+                    }
+                }
+            </script>
+
+
+
+
+
+
                 </div>
                 </body>
                 </html>

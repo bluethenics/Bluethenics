@@ -51,7 +51,7 @@
                         <label for="item" class="form-label">Item Name:</label>
                         <input type="text" name="item" class="form-input" required>
             
-                        <button type="submit" class="submit-btn">Order</button>
+                        <button  onclick="popup()" type="submit" class="submit-btn">Order</button>
                     </form>
                 </div>
 
@@ -69,6 +69,18 @@
                         const sidebar=document.querySelector('.sidebar')
                         sidebar.style.display = 'none'
                     }
+
+                    function popup() {
+                        alert("Thank you for your purchase!\n" +
+                            "After payment confirmation, you will receive access to the item you purchased.\n" +
+                            "To view your item, click our logo on the homepage.\n" +
+                            "Please note: Payment confirmation may take up to 24 hours.");
+                            }
+
+
+
+
+                    
                 </script>
                 </div>
                 </body>

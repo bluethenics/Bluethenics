@@ -1167,3 +1167,184 @@ input[type="checkbox"] {
     outline: none; /* Remove focus outline */
     border-color: #007BFF; /* Border color when focused */
 }
+
+
+
+
+
+
+/* Search Bar Container */
+.search-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%; /* Adjust width based on your page layout */
+    max-width: 600px;
+    position: relative;
+}
+
+/* Search Input Field */
+#search-bar {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add focus effect */
+#search-bar:focus {
+    border-color: #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Search Results Container */
+.search-results {
+    margin-top: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-height: 200px; /* Limit height */
+    overflow-y: auto;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 10;
+}
+
+/* Individual Search Result */
+.search-result {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Hover Effect */
+.search-result:hover {
+    background-color: #f0f0f0;
+}
+
+/* Empty State or No Matches */
+.search-results::empty {
+    display: none;
+}
+
+/* Mobile Friendly Adjustments */
+@media (max-width: 768px) {
+    .search-bar-container {
+        width: 95%;
+    }
+
+    #search-bar {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+/* Container for the reading sections */
+.reading-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f9f9f9, #ececec);
+}
+
+/* Individual reading card */
+.reading-div {
+    background-color: #fff;
+    width: 280px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    opacity: 0; /* Initial state for entrance animation */
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Entrance animation */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hover effect for cards */
+.reading-div:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fefefe;
+}
+
+/* Heading styling */
+.reading-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0; /* For fade-in animation */
+    animation: fadeInText 1s ease forwards 0.2s;
+}
+
+/* Text animation */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Read button styling */
+.read-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effect */
+.read-button:hover {
+    background-color: #2417e2;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button click effect */
+.read-button:active {
+    transform: scale(0.98);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .reading-div {
+        width: 100%;
+    }
+}
