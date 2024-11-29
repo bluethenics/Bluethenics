@@ -251,35 +251,27 @@
 
 
 
-                <script>
-                    function showSidebar(){
-                        const sidebar=document.querySelector('.sidebar')
-                        sidebar.style.display = 'flex'
-                    }
-                    function hideSidebar(){
-                        const sidebar=document.querySelector('.sidebar')
-                        sidebar.style.display = 'none'
-                    }
-                </script>
+<script>
+  document.getElementById('saveImageButton').addEventListener('click', function () {
+    // Convert the form to an image with high resolution and solid background
+    html2canvas(document.getElementById('form-container'), {
+      scale: 2, // Higher resolution for better clarity
+      backgroundColor: '#ffffff', // Solid background to prevent transparency
+      useCORS: true // Handle cross-origin issues for images
+    }).then(canvas => {
+      // Create a download link for the image
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL('image/png'); // Convert canvas to image URL
+      link.download = 'form-screenshot.png'; // Image file name
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+      // Trigger the download
+      document.body.appendChild(link); // Append link to the DOM temporarily
+      link.click(); // Trigger the download click event
+      document.body.removeChild(link); // Remove the link after clicking
+    });
+  });
+</script>
 
-                <script>
-                    document.getElementById('saveImageButton').addEventListener('click', function () {
-                      // Convert the form to an image with high resolution and solid background
-                      html2canvas(document.getElementById('form-container'), {
-                        scale: 2, // Higher resolution for better clarity
-                        backgroundColor: '#ffffff', // Solid background to prevent transparency
-                        useCORS: true // Handle cross-origin issues for images
-                      }).then(canvas => {
-                        // Create a download link for the image
-                        const link = document.createElement('a');
-                        link.download = 'form-screenshot.png'; // Image file name
-                        link.href = canvas.toDataURL('image/png', 1.0); // High-quality PNG
-                        link.click(); // Trigger download
-                      });
-                    });
-                  </script>
                   
                   
                   
