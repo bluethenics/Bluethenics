@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta charset="UFT-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link rel="stylesheet" href="style.css">
+            <title>bluethenics</title>
+
+
+            <style>
+                body {
+                  font-family: Arial, sans-serif;
+                  background-color: #f9f9f9;
+                  margin: 0;
+                  padding: 20px;
+                }
+              
+                .img-info {
+                  max-width: 600px;
+                  margin: auto;
+                  background-color: #fff;
+                  padding: 20px 30px;
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  animation: fadeIn 0.8s ease-in-out;
+                  position: relative;
+                  top: 30% ;
+                }
+              
+                form {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                }
+              
+                label {
+                  font-size: 14px;
+                  font-weight: bold;
+                  color: #333;
+                  margin-bottom: 5px;
+                  transform: translateX(-20px);
+                  opacity: 0;
+                  animation: slideIn 0.6s forwards;
+                }
+              
+                input[type="date"],
+                input[type="text"],
+                input[type="number"] {
+                  padding: 12px;
+                  font-size: 14px;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  transition: border-color 0.3s, transform 0.3s;
+                  transform: translateX(-20px);
+                  opacity: 0;
+                  animation: slideIn 0.6s forwards;
+                }
+              
+                input[type="date"]:focus,
+                input[type="text"]:focus,
+                input[type="number"]:focus {
+                  border-color: #007bff;
+                  transform: scale(1.02);
+                }
+              
+                input[type="submit"] {
+                  background-color: #007bff;
+                  color: #fff;
+                  padding: 12px;
+                  font-size: 16px;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: background-color 0.3s, transform 0.3s;
+                  transform: translateX(-20px);
+                  opacity: 0;
+                  animation: slideIn 0.6s forwards;
+                  animation-delay: 0.2s;
+                }
+              
+                input[type="submit"]:hover {
+                  background-color: #0056b3;
+                  transform: scale(1.05);
+                }
+              
+                /* Animations */
+                @keyframes slideIn {
+                  from {
+                    opacity: 0;
+                    transform: translateX(-20px);
+                  }
+                  to {
+                    opacity: 1;
+                    transform: translateX(0);
+                  }
+                }
+              
+                @keyframes fadeIn {
+                  from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                  }
+                  to {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+
+                                #form-container {
+                background-color: #ffffff; /* Solid white background */
+                padding: 20px;
+                border-radius: 10px;
+
+                /* Paragraph styling */
+                p {
+                font-family: 'Arial', sans-serif;
+                font-size: 14px;
+                color: #555;
+                margin-bottom: 10px;
+                text-align: center;
+                }
+
+                /* Button styling */
+                #saveImageButton {
+                display: block;
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
+                background-color: #007bff;
+                border: none;
+                border-radius: 8px;
+                text-align: center;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s, transform 0.2s ease;
+                }
+
+                /* Hover effect */
+                #saveImageButton:hover {
+                background-color: #0056b3;
+                }
+
+                /* Active effect */
+                #saveImageButton:active {
+                transform: scale(0.98);
+                }
+
+                /* Button animation on load */
+                @keyframes fadeInButton {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                }
+
+                #saveImageButton {
+                animation: fadeInButton 0.6s ease-out;
+                }
+
+}
+
+
+              </style>
+
+
+        </head>
+        <body>
+            <div class="wrapper">
+                <header>
+                    <nav>
+                        <ul class="sidebar">
+                            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                            <li><a href="index.html">home</a></li>
+                            <li><a href="shop.html">shop</a></li>
+                            <li><a href="progress.html">progress</a></li>
+                            <li><a href="help.html">HELP</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Bluethenics</a></li>
+                            <li class="hideOnMobile"><a href="index.html">home</a></li>
+                            <li class="hideOnMobile"><a href="shop.html">shop</a></li>
+                            <li class="hideOnMobile"><a href="progress.html">progress</a></li>
+                            <li class="hideOnMobile"><a href="help.html">HELP</a></li>
+                            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+
+
+
+                <div class="img-info" id="form-container">
+  <form  id="myForm">
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" name="date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="text">Day Experience</label>
+      <input type="text" name="Experience" placeholder="Describe your day..." required>
+    </div>
+
+    <div class="form-group">
+      <label for="text">Four Things I Sucked At</label>
+      <div class="four-things">
+        <input type="text" name="Experience" placeholder="1" required>
+        <input type="text" name="Experience" placeholder="2" required>
+        <input type="text" name="Experience" placeholder="3" required>
+        <input type="text" name="Experience" placeholder="4" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="text">Things I Am Grateful For</label>
+      <input type="text" name="great" placeholder="What are you grateful for?" required>
+    </div>
+
+    <div class="form-group">
+        <label for="text">Todays progress persentage </label>
+        <div class="four-things">
+          <input type="number" name="percentage" placeholder="A" >
+          <input type="number" name="percentage" placeholder="B" >
+          <input type="number" name="percentage" placeholder="C" >
+        </div>
+      </div>
+
+    <div class="form-group">
+      <label for="rate">Overall Rating (1-10)</label>
+      <input type="number" name="rating" min="1" max="10" placeholder="Rate your day" required>
+    </div>
+
+    <div class="form-group">
+      <label for="improve">Things I Need to Improve</label>
+      <input type="text" name="improve" placeholder="Areas to improve..." required>
+    </div>
+    <p>After clicking this button, the image of this form will be saved to your mobile.</p>
+    <button id="saveImageButton">Save Form as Image</button>
+    
+  </form>
+</div>
+
+
+
+
+
+                <script>
+                    function showSidebar(){
+                        const sidebar=document.querySelector('.sidebar')
+                        sidebar.style.display = 'flex'
+                    }
+                    function hideSidebar(){
+                        const sidebar=document.querySelector('.sidebar')
+                        sidebar.style.display = 'none'
+                    }
+                </script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+                <script>
+                    document.getElementById('saveImageButton').addEventListener('click', function () {
+                      // Convert the form to an image with high resolution and solid background
+                      html2canvas(document.getElementById('form-container'), {
+                        scale: 2, // Higher resolution for better clarity
+                        backgroundColor: '#ffffff', // Solid background to prevent transparency
+                        useCORS: true // Handle cross-origin issues for images
+                      }).then(canvas => {
+                        // Create a download link for the image
+                        const link = document.createElement('a');
+                        link.download = 'form-screenshot.png'; // Image file name
+                        link.href = canvas.toDataURL('image/png', 1.0); // High-quality PNG
+                        link.click(); // Trigger download
+                      });
+                    });
+                  </script>
+                  
+                  
+                  
+                  
+                
+
+
+
+
+                </div>
+                </body>
+                </html>
