@@ -126,4 +126,4 @@ function scrollToSection(sectionId) {
 }
 
 
-
+//tab opening//
