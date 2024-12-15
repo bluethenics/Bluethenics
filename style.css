@@ -2,9 +2,54 @@
     margin: 0;
     padding: 0;
 }
-body{
+/*body{
     background-color: white;
-}
+}*/
+
+
+
+
+
+
+
+
+
+body {
+    background: linear-gradient(90deg, rgba(0, 0, 255, 0.6) 0%,rgba(0,0,0),/* rgba(255, 0, 0, 0.6)*/  rgba(0, 0, 255, 0.6) 100% 0%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 200% 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+  }
+  
+  /* Optional: Adding a slight movement effect to make it feel dynamic */
+  @keyframes lightShift {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  body {
+    animation: lightShift 10s ease-in-out infinite;
+  }
+
+
+
+
+
+
+
+
+
+
 
 a {
     cursor: pointer;
@@ -16,10 +61,10 @@ a {
 
 .img-info{
     width: 100%;
-    margin: 20px;
     border-radius: 20px;
     position: relative;
-    right: 20px;
+     
+
 }
 .img-info h2 {
     padding: 30px 30px 20px;
@@ -43,7 +88,8 @@ a {
 
 
 nav {
-    background-color: white;
+    /*background-color: white;*/
+    background-color: #1c238d;
     box-shadow: 3px 3 px 3px rgba(0,0,0,0.1);
 }
 nav ul {
@@ -62,12 +108,15 @@ nav a{
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 nav a:hover {
-    background-color: rgb(159, 159, 170);
-    border-radius: 10px;
+    background-color: rgb(4, 4, 247);
+   /*border-radius: 10px;*/
 }
+
+   
+
 nav li:first-child {
     margin-right: auto;
 }
@@ -78,13 +127,15 @@ nav li:first-child {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.658);
+    /*background-color: rgba(255, 255, 255, 0.658);*/
+    background-color: #1c248da9;
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0,0,0,0.1);
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    
 }
 .side li{
     width: 100%;
@@ -116,6 +167,7 @@ nav li:first-child {
 @media(max-width: 400px){
     .side{
         width: 100%;
+        
     }
 }
 
@@ -196,6 +248,47 @@ h2 {
     transform: translateY(-10px);
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
 }
+
+
+
+
+
+.img-info-pack {
+    text-align: center;
+    margin: 40px 20px;
+    padding: 30px;
+    background-color: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-out;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; /* Center the section */
+}
+
+.img-info-pack h2 {
+    font-size: 2rem;
+    color: #eeeeee;
+}
+
+.img-info-pack p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.img-info-pack:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
 
 /* Navigation Buttons */
 .index-nav-button {
@@ -805,8 +898,9 @@ footer {
 
 .payment-title {
     font-size: 2rem;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .payment-options {
@@ -842,7 +936,7 @@ footer {
 
 .payment-text {
     font-size: 1rem;
-    color: #333;
+    color: #ffffff;
 }
 
 .instructions-section {
@@ -855,7 +949,7 @@ footer {
 
 .instructions-title {
     font-size: 1.5rem;
-    color: #333;
+    color: #000000;
     margin-bottom: 15px;
 }
 
@@ -1068,7 +1162,7 @@ input[type="checkbox"] {
 
 /* Styling for the payment form container */
 .payment-form {
-    background: #fff;
+    background: none;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -1080,6 +1174,7 @@ input[type="checkbox"] {
 .fam-img {
     height: 400px;
     width: 100%;
+    border-radius: 20px;
 }
 .qr-img-div {
     display: flex;
@@ -1088,7 +1183,7 @@ input[type="checkbox"] {
 .payment-text {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #7f8c8d;
+    color: #ffffff;
 }
 
 
@@ -1100,14 +1195,14 @@ input[type="checkbox"] {
 /* Styling for the form title */
 .form-title {
     text-align: center;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
 /* Label styling */
 .form-label {
     font-size: 16px;
-    color: #333;
+    color: #fffbfb;
     margin-bottom: 0.5rem;
     display: block;
 }
@@ -1152,7 +1247,7 @@ input[type="checkbox"] {
 .payment-form input[type="number"] {
     background-color: transparent; /* Remove any background color */
     border: 1px solid #ddd; /* Ensure border is visible */
-    color: #333; /* Set text color */
+    color: #ffffff; /* Set text color */
 }
 
 /* Hide number input spinners in Webkit browsers */
@@ -1164,11 +1259,54 @@ input[type="checkbox"] {
 
 /* Prevent yellow background in Firefox */
 .payment-form input[type="number"]:focus {
-    background-color: white; /* Explicitly set white background */
+    background-color: none; /* Explicitly set white background */
     outline: none; /* Remove focus outline */
     border-color: #007BFF; /* Border color when focused */
+    color: white;
 }
 
+/* Remove spinner for number input in Firefox */
+.payment-form input[type="text"] {
+    background-color: transparent; /* Remove any background color */
+    border: 1px solid #ddd; /* Ensure border is visible */
+    color: #ffffff; /* Set text color */
+}
+
+/* Hide number input spinners in Webkit browsers */
+.payment-form input[type="text"]::-webkit-outer-spin-button,
+.payment-form input[type="text"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Prevent yellow background in Firefox */
+.payment-form input[type="text"]:focus {
+    background-color: none; /* Explicitly set white background */
+    outline: none; /* Remove focus outline */
+    border-color: #007BFF; /* Border color when focused */
+    color: white;
+}
+
+.payment-form input[type="email"] {
+    background-color: transparent; /* Remove any background color */
+    border: 1px solid #ddd; /* Ensure border is visible */
+    color: #ffffff; /* Set text color */
+}
+
+/* Hide number input spinners in Webkit browsers */
+.payment-form input[type="email"]::-webkit-outer-spin-button,
+.payment-form input[type="email"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Prevent yellow background in Firefox */
+.payment-form input[type="email"]:focus {
+    background-color: none; /* Explicitly set white background */
+    outline: none; /* Remove focus outline */
+    border-color: #007BFF; /* Border color when focused */
+    color: white;
+}
 
 
 
@@ -1355,7 +1493,92 @@ input[type="checkbox"] {
 
 
 
+/* Base button styles */
+.up-button {
+    background-color: #080691; /* Light Blue */
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    font-size: 10px;
+    font-weight: 200;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
+/* Hover effect */
+.up-button:hover {
+    background-color: #4d4d4d4f; /* Lighter Blue on hover */
+    transform: scale(1.1); /* Slight zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* Click effect */
+.up-button:active {
+    transform: scale(0.9); /* Click animation */
+}
+
+/* Button Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 18px rgba(0, 123, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    }
+}
+
+/* Add animation to buttons on hover */
+.up-button:hover {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+
+.pro-img{
+    /*width: 25%;
+    height: 50%;
+    border-radius: 10px;*/
+    background-color: #fff;
+    padding-left: 10px; 
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 30%;
+    max-width: 500px;
+    transition: box-shadow 0.3s ease;
+
+}
+
+.order {
+    background-color: #03ff6c;  /* Dark blue background */
+    color: rgb(0, 0, 0);               /* White text */
+    font-size: 16px;            /* Readable font size */
+    padding: 10px 20px;         /* Comfortable padding */
+    border: none;               /* No border */
+    border-radius: 5px;         /* Rounded corners */
+    cursor: pointer;            /* Pointer cursor on hover */
+    transition: all 0.3s ease;  /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.order:hover {
+    background-color: #62ff84; /* Slightly lighter blue */
+    box-shadow: 0 4px 8px rgba(0, 140, 255, 0.664); /* Subtle shadow */
+    transform: scale(1.1) rotate(6deg); 
+}
+
+/* Active Effect */
+.order:active {
+    background-color: #003366; /* Darker blue when pressed */
+    transform: scale(1.1) rotate(6deg);    /* Slight press effect */
+}
 
 
 
