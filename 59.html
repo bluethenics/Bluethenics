@@ -20,9 +20,9 @@
                         </ul>
                         <ul>
                             <li><a href="#">Bluethenics</a></li>
-                            <li class="hideOnMobile"><a href="index.html">home</a></li>
-                            <li class="hideOnMobile"><a href="shop.html">shop</a></li>
-                            <li class="hideOnMobile"><a href="progress.html">progress</a></li>
+                            <li class="hideOnMobile"><a href="index.html">HOME</a></li>
+                            <li class="hideOnMobile"><a href="shop.html">SHOP</a></li>
+                            <li class="hideOnMobile"><a href="progress.html">PROGRESS</a></li>
                             <li class="hideOnMobile"><a href="help.html">HELP</a></li>
                             <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
                         </ul>
@@ -30,42 +30,36 @@
                 </header>
 
 
-
-                <section class="product-section">
-                    <article class="product-image">
-                        <img src="mind.jpg" alt="Redro eBook" class="product-image-img">
-                    </article>
-                
-                    <div class="product-details">
-                        <div class="product-price">
-                            <h3>Price: ₹29</h3>
-                        </div>
-                
-                        <div class="product-title">
-                            <h2>Mind</h2>
-                        </div>
-                
-                        <div class="product-description">
-                            <p>Ready to let go of an old, limiting mindset and embrace a new,
-                                 empowering one? Our Mindset Transformation eBook is designed
-                                  to help you develop a clear, goal-oriented outlook that can 
-                                  bring you closer to achieving your dreams. With practical exercises 
-                                  and insights, this guide will walk you through the steps needed to break 
-                                  free from negative thinking patterns, build confidence, and stay focused on what matters most.
-                                 Take the first step toward a refreshed and purposeful mindset today!<p>
-                        </div>
-                
-                        <div class="purchase-button">
-                            <button onclick="location.href='29.html'" class="buy-now-btn">
-                                Buy Now
-                            </button>
-                        </div>
+                <div class="payment-form">
+                    <h2 class="form-title">Order Form</h2>
+                    <form action="https://formspree.io/f/myzyjodb" method="post">
+<div class="qr-img-div">
+                        <img src="59.jpg"  class="fam-img">
                     </div>
-                </section>
+                    <P class="payment-text"></P> you’re paying to 'AFSANA FAIZAL'</P>
+
+
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" name="name" class="form-input" required>
+            
+                        <label for="mobile" class="form-label">Mobile Number:</label>
+                        <input type="number" name="mobile" class="form-input" required>
+            
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" name="email" class="form-input" required>
+            
+                        <label for="item" class="form-label">Item Name:</label>
+                        <input type="text" name="item" class="form-input" required>
+            
+                        <button type="submit" class="submit-btn" onclick="instruction()">Order</button>
+                    </form>
+                </div>
 
 
 
 
+
+                
                 <script>
                     function showSidebar(){
                         const sidebar=document.querySelector('.sidebar')
@@ -75,6 +69,9 @@
                         const sidebar=document.querySelector('.sidebar')
                         sidebar.style.display = 'none'
                     }
+                    function instruction() {
+            alert("Payment Confirmation and Product Delivery Upon confirmation of your payment, a download link for the purchased product will be sent to the email address provided during checkout. Please note that payment confirmation may take up to 24 hours.Thank you for your patience and understanding. ");
+        }
                 </script>
                 </div>
                 </body>
