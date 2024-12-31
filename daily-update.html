@@ -6,259 +6,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Bluethenics</title>
     <style>
-         body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        overflow: auto;
-    }
-
-    .wrapper {
-        width: 100%;
-        max-width: 1200px;
-        padding: 20px;
-    }
-
-    .journal-form {
-
-        width: 100%;
-        max-width: 500px; /* Limit size for larger screens */
-        margin: 0 auto; /* Center for all screen sizes */
-        box-sizing: border-box; /* Include padding in width */
-        display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background: linear-gradient(135deg, #8e44ad, #3498db);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-   
-    }
-    .date-day, .pro-mood, .progress-form {
-        flex-wrap: wrap; /* Allow wrapping on small screens */
-    }
-
-    /* Ensure the form and its content are centered */
-    .journal-form h2,
-    .journal-form h3 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .form-group2 div {
-        margin-bottom: 15px; /* Add spacing for stacked inputs */
-    }
-    .sidebar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px; /* Add padding for better usability */
-    }
-
-
-
-    .menu-button {
-        display: flex; /* Ensure menu button is visible */
-        justify-content: center;
-        align-items: center;
-    }
-
-    @media screen and (max-width: 400px) {
-        .journal-form {
-            padding: 10px; /* Reduce padding on smaller screens */
-        }
-
-        nav ul {
-            padding-left: 10px; /* Adjust padding for smaller screens */
-        }
-
-        .submit-button {
-            width: 100%; /* Full width for better tap targets */
-        }
-    }
-
-
-
-        .form-group, .form-group2, .form-group3 {
-            margin-bottom: 15px;
-        }
-        .form-group, .form-group2 div, .form-group3 {
-        width: 100%; /* Take full width on small screens */
-        max-width: none; /* Override set widths for flexibility */
-    }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="number"],
-        .form-group input[type="date"],
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-group2, .form-group3 {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: space-between;
-        }
-
-        .form-group2 div,
-        .form-group3 div {
-            flex: 1;
-            min-width: 120px;
-        }
-
-        .submit-button {
-        background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
-        color: white;
-        border: none;
-        border-radius: 50px; /* Rounded corners */
-        padding: 12px 20px; /* Padding for size */
-        font-size: 16px; /* Text size */
-        font-weight: bold; /* Bold text */
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-       
-    }
-
-    .submit-button:hover {
-        
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-    }
-
-    .submit-button:active {
-        
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); /* Softer shadow */
-    }
-
-        @media screen and (max-width: 600px) {
-            .journal-form {
-                width: 100%;
-                padding: 15px;
-            }
-
-            .form-group2,
-            .form-group3 {
-                flex-direction: column;
-            }
-
-            .form-group2 div,
-            .form-group3 div {
-                width: 100%;
-                min-width: auto;
-            }
-        }
-
-        /* Navigation Styles */
-nav {
-    background-color: white;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure it spans the entire width */
-    padding: 10px 0; /* Add some padding for better spacing */
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-nav ul {
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-start; /* Align links to the left */
-    align-items: center;
-    padding-left: 20px; /* Adds padding from the left edge */
-}
-
-nav li {
-    height: 50px;
-}
-
-nav a {
-    height: 100%;
-    padding: 0 20px; /* Adjusted padding for better spacing */
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-    font-size: 16px; /* Adjust font size as needed */
-}
-
-nav a:hover {
-    background-color: rgb(159, 159, 170);
-}
-
-nav li:first-child {
-    margin-right: auto; /* Align the first item to the left */
-}
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.658);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.sidebar a {
-    width: 100%;
-}
-
-.menu-button {
-    display: none;
-}
-
-.header-logo {
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
-    margin: 5px;
-}
-
-@media(max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-button {
-        display: block;
-    }
-}
-
-@media(max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
-}
-
-.date-day {
-    display: flex;
-    justify-content: space-between;
-}
-.pro-mood{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
 
 
 /* Styling for the container */
@@ -345,7 +95,33 @@ label:hover {
     overflow: auto; /* Ensure child elements are not clipped */
 }
 .journal-form {
-    border: 1px solid red;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+ .journal-form h2,h3 {
+    color: white;
+ }
+
+ .submit-button {
+    color: #fff; /* White text for contrast */
+    background-color: #007BFF; /* Modern blue background */
+    padding: 12px 24px; /* Slightly larger padding for a more balanced appearance */
+    border-radius: 50px; /* Rounded corners */
+    border: none; /* Remove border for a clean look */
+    font-size: 16px; /* Standard readable font size */
+    font-weight: bold; /* Emphasize text */
+    text-transform: uppercase; /* Make text uppercase for a stronger impact */
+    cursor: pointer; /* Change cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.submit-button:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Focus state for accessibility */
 }
 
     </style>
@@ -390,8 +166,6 @@ label:hover {
             <input type="text" id="day" placeholder="Day #" required>
         </div>
     </div>
-
-        <h3>"Everything you’ve ever wanted is on the other side of fear" - George Addair</h3>
         <div class="pro-mood">
         <div class="form-group3">
             <label for="productivity">Productivity (1-10)</label>
