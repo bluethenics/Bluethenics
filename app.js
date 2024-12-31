@@ -13,15 +13,7 @@ import {
 import { getFirestore, collection, addDoc, query, orderBy, getDocs, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
 // Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAnE-VeMtB3vgPFXe_Ol_THZDcVGf1t3I0",
-  authDomain: "login-signup-6019d.firebaseapp.com",
-  projectId: "login-signup-6019d",
-  storageBucket: "login-signup-6019d.appspot.com",
-  messagingSenderId: "144722968689",
-  appId: "1:144722968689:web:6f6d20cdd2e40e51a2dbd0",
-  measurementId: "G-R1Q35CBZ5R",
-};
+         
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
